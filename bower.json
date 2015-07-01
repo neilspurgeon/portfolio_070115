@@ -13,6 +13,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.5.0"
   }
 }
