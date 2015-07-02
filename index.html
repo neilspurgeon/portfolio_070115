@@ -6,21 +6,45 @@
   <title>Neil Spurgeon</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
+
   <header>
-    <h1>Neil spurgeon</h1>
-    <h2>805 748 3201</h2>
-    <h2>hello@neilspurgeon.com</h2>
-    <h2><a href="www.github.com/neilspurgeon">github.com/neilspurgeon</a></h2>
-    <h2><a href="linkedin.com/in/neilspurgeon">linkedin.com/in/neilspurgeon</a>
-    <a href="#"></a>
+    <div class="header-container">
+      <h1 class="name"><a href="#">Neil spurgeon</a></h1>
+      <div class="contact">
+        <h2>805 748 3201</h2>
+        <h2>hello@neilspurgeon.com</h2>
+      </div>
+      <div class="links">
+        <h2><a href="www.github.com/neilspurgeon">github.com/neilspurgeon</a></h2>
+        <h2><a href="linkedin.com/in/neilspurgeon">linkedin.com/in/neilspurgeon</a>
+      </h2>
+    </div>
   </header>
-  <div id="container">
-    <h1>Hello.</h1>
+
+  <div class="hero-container">
+    <p>Hello, I'm Neil.<br/>
+    I'm a designer + web developer</p>
+  </div>
+
+  <div class="projects-container">
+  <h2>A few recent projects:</h2>
+  <ul>
+    <li>
+      <h2 class="project-title"><a href="#">timekard.io</a></h2>
+      <p class="project-description">An app to keep track of your time. Designed with freelancers in mind.</p>
+      <p class="project-details">Full stack developement, DesignNode.js, Express, MongoDB</p>
+    </li>
+    <li>
+      <h2 class="project-title"><a href="#">robingifts.com</a></h2>
+      <p class="project-description">Crowdfunding app for gifts. Create and share private groups to fund gifts.</p>
+      <p class="project-details">Full stack developementRuby On Rails, PostgreSQL</p>
+    </li>
+  </ul>
   </div>
 </body>
 </html>

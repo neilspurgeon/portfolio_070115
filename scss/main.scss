@@ -4,26 +4,122 @@
 
 $susy: (
   columns: 12, 
-  container: 1140px,
-  gutters: 0.25,
+  container: 90%,
   global-box-sizing: border-box,
-  debug: (image: show-columns)
+  // debug: (image: show-columns)
   );
 
-.testing {
-  @include span(12);
+@include border-box-sizing;
+
+////////////////////////////////////////////////////////
+// GLOBALS =============================================
+////////////////////////////////////////////////////////
+
+$blue   : #0033F0;
+$black  : #000000;
+$border : 1px solid $blue;
+
+html {
+  font-size: 15px;
+  font-family: "Maison Neue";
+  font-weight: 600;
+  line-height: 1.35;
 }
 
-.testing2 {
-  @include span(2);
-  margin-left: span(4);
+h1 {
+  font-size: 1.3em;
 }
 
-.testing3 {
-  @include span(2);
-  margin-left: span(6);
-  @include breakpoint(20em) {
-    @include span(4); 
-    margin-left: span(3);
+h2 {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+ul {
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+
+////////////////////////////////////////////////////////
+// HEADER ==============================================
+////////////////////////////////////////////////////////
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .header-container {
+    @include container;
+  }
+  .name {
+    @include span(6);
+    a {
+      color: $blue;
+    }
+  }
+  .contact {
+    @include span(3);
+  }
+  .links {
+    @include span(3 at 10);
+  }
+  h2 {
+    font-weight: 400;
   }
 }
+
+////////////////////////////////////////////////////////
+// HERO ================================================
+////////////////////////////////////////////////////////
+
+.hero-container {
+  @include container;
+  margin-top: 5em;
+  height: 45vh;
+  // center inner element
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  p {
+    font-size: 2em;
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
+  }
+}
+
+////////////////////////////////////////////////////////
+// CONTENT =============================================
+////////////////////////////////////////////////////////
+
+.projects-container {
+  @include container;
+  ul {
+    border-top: $border
+  }
+  li {
+    height: 12em;
+    border-bottom: $border;
+  }
+}
+
+.project-title {
+  @include span(4);
+  font-size: 2em;
+}
+
+.project-description {
+  @include span(4);
+}
+.project-details {
+  @include span(4 at 9);
+}
+
+
